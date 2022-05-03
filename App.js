@@ -32,9 +32,11 @@ export default function App() {
   };
 
   const addNewCountable = (name) => {
-    const newState = [...countables, { name, count: 0 }];
-    setCountables(newState);
-    saveCountables(newState);
+    if (!countables.find((ele) => ele.name === name)) {
+      const newState = [...countables, { name, count: 0 }];
+      setCountables(newState);
+      saveCountables(newState);
+    }
   };
 
   // https://medium.com/@nickyang0501/keyboardavoidingview-not-working-properly-c413c0a200d4

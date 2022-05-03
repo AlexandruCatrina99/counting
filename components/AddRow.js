@@ -9,8 +9,13 @@ export const AddRow = ({ addNewCountable }) => {
 
   return (
     <View style={CommonStyles.row}>
-      <TextInput placeholder="Enter name" onChangeText={setName} />
+      <TextInput
+        style={{ flex: 0.9 }}
+        placeholder="Enter name"
+        onChangeText={setName}
+      />
       <CountButton
+        style={{ flex: 0.1 }}
         text="Add"
         submit={() => {
           addNewCountable(name);
