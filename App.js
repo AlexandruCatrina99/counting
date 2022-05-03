@@ -32,7 +32,7 @@ export default function App() {
   };
 
   const addNewCountable = (name) => {
-    if (!countables.find((ele) => ele.name === name)) {
+    if (!countables.find((ele) => ele.name === name) && name.trim() !== "") {
       const newState = [...countables, { name, count: 0 }];
       setCountables(newState);
       saveCountables(newState);
