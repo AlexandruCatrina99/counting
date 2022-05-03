@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { Keyboard, TouchableOpacity, Text, StyleSheet } from "react-native";
 
 import { CommonStyles } from "../styles/CommonStyles";
 
